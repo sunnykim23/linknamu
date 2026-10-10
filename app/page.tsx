@@ -7,9 +7,7 @@ const links = [
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#f5f5f5] px-4 py-8 text-slate-900 sm:px-6 lg:px-10">
-      <div className="mx-auto max-w-5xl rounded-[30px] border-[3px] border-slate-900 bg-white p-4 sm:p-6">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <section className="w-full rounded-[28px] border-[3px] border-slate-900 bg-white p-5 shadow-[8px_8px_0_0_rgba(15,23,42,0.05)] md:max-w-[540px]">
+          <section className="mx-auto w-full max-w-[680px] rounded-[28px] border-[3px] border-slate-900 bg-white p-5 shadow-[8px_8px_0_0_rgba(15,23,42,0.05)] sm:p-8">
             <div className="flex items-center justify-center pt-2">
               <div className="flex h-32 w-32 items-center justify-center rounded-full border-[3px] border-slate-900 bg-white sm:h-40 sm:w-40">
                 <img
@@ -41,9 +39,6 @@ export default function HomePage() {
               ))}
             </div>
           </section>
-
-        </div>
-      </div>
     </main>
   );
 }
