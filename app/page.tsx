@@ -6,10 +6,15 @@ const links = [
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,255,255,0.82),transparent_48%),linear-gradient(145deg,#fbf5e9_0%,#f9e5d8_54%,#f4ddd1_100%)] px-4 py-12 text-stone-900 sm:px-6">
-      <section className="w-full max-w-[480px] px-2 py-4 sm:px-6 sm:py-8">
+    <main className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,255,255,0.82),transparent_48%),linear-gradient(145deg,#fbf5e9_0%,#f9e5d8_54%,#f4ddd1_100%)] px-4 py-12 text-stone-900 sm:px-6">
+      <div className="sparkle-field" aria-hidden="true">
+        {Array.from({ length: 14 }, (_, index) => (
+          <span className="sparkle" key={index}>✦</span>
+        ))}
+      </div>
+      <section className="relative z-10 w-full max-w-[480px] px-2 py-4 sm:px-6 sm:py-8">
         <div className="flex justify-center">
-          <div className="rounded-full bg-white/70 p-1.5 shadow-[0_16px_40px_rgba(120,82,59,0.18)] ring-1 ring-white/80">
+          <div className="profile-glow rounded-full bg-white/75 p-1.5 ring-1 ring-amber-200/80">
             <img
               src="/profile.png"
               alt="프로필 사진"

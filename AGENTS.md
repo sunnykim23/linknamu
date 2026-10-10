@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Linknamu browser preview
+
+When changing Linknamu's visual design, keep the local Next.js dev server running when available and use the open local browser page at `http://localhost:3000` to verify the result. Next.js Fast Refresh should apply saved changes automatically; if it does not, reload the page and confirm the updated UI is visible before finishing.
