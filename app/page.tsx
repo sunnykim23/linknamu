@@ -1,44 +1,50 @@
 const links = [
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'Blog', href: 'https://velog.io' },
-  { label: 'Portfolio', href: 'https://behance.net' },
+  { label: 'GitHub', href: 'https://github.com/sunnykim23', emoji: '🐙' },
+  { label: 'Instagram', href: 'https://www.instagram.com/deir.finity/', emoji: '📱' },
+  { label: 'Email', href: 'mailto:boyrukim@gmail.com', emoji: '📮' },
 ];
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#f5f5f5] px-4 py-8 text-slate-900 sm:px-6 lg:px-10">
-          <section className="mx-auto w-full max-w-[680px] rounded-[28px] border-[3px] border-slate-900 bg-white p-5 shadow-[8px_8px_0_0_rgba(15,23,42,0.05)] sm:p-8">
-            <div className="flex items-center justify-center pt-2">
-              <div className="flex h-32 w-32 items-center justify-center rounded-full border-[3px] border-slate-900 bg-white sm:h-40 sm:w-40">
-                <img
-                  src="/profile.png"
-                  alt="프로필 사진"
-                  className="h-full w-full rounded-full object-cover"
-                  style={{ objectPosition: 'center 18%' }}
-                />
-              </div>
-            </div>
+    <main className="flex min-h-screen items-center justify-center bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,255,255,0.82),transparent_48%),linear-gradient(145deg,#fbf5e9_0%,#f9e5d8_54%,#f4ddd1_100%)] px-4 py-12 text-stone-900 sm:px-6">
+      <section className="w-full max-w-[480px] px-2 py-4 sm:px-6 sm:py-8">
+        <div className="flex justify-center">
+          <div className="rounded-full bg-white/70 p-1.5 shadow-[0_16px_40px_rgba(120,82,59,0.18)] ring-1 ring-white/80">
+            <img
+              src="/profile.png"
+              alt="프로필 사진"
+              className="h-32 w-32 rounded-full object-cover sm:h-36 sm:w-36"
+              style={{ objectPosition: 'center 18%' }}
+            />
+          </div>
+        </div>
 
-            <div className="mt-7 text-center">
-              <h1 className="text-3xl font-medium tracking-tight text-slate-900">김민성</h1>
-              <p className="mt-4 text-lg text-slate-700">몽환적 감각자, 꿈 제작자</p>
-            </div>
+        <div className="mt-8 text-center">
+          <h1 className="text-3xl font-bold tracking-[-0.04em] text-stone-900 sm:text-[2rem]">
+            김민성
+          </h1>
+          <p className="mx-auto mt-3 max-w-sm text-[15px] leading-7 text-stone-600 sm:text-base">
+            몽환적 감각자, 꿈 제작자 : 요즘에는 AI 코딩에 관심이 많아요
+          </p>
+        </div>
 
-            <div className="mt-8 space-y-4">
-              {links.map((link, index) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block rounded-[18px] border-[3px] border-slate-900 bg-white px-4 py-4 text-center transition hover:-translate-y-1 hover:shadow-[6px_6px_0_0_rgba(15,23,42,0.08)]"
-                >
-                  <span className="text-lg font-medium text-slate-900">{link.label}</span>
-                  {index === links.length - 1 && <span className="ml-2 text-sm text-slate-500">...</span>}
-                </a>
-              ))}
-            </div>
-          </section>
+        <nav aria-label="프로필 링크" className="mt-9 space-y-3.5 sm:mt-10 sm:space-y-4">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex min-h-[68px] items-center justify-center rounded-[20px] border border-white/75 bg-white/55 px-5 py-4 text-center shadow-[0_8px_24px_rgba(120,82,59,0.12)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/75 hover:shadow-[0_12px_28px_rgba(120,82,59,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8e8dc]"
+            >
+              <span className="text-base font-semibold tracking-[-0.02em] text-stone-800 sm:text-[17px]">
+                <span className="mr-2.5" aria-hidden="true">{link.emoji}</span>
+                {link.label}
+              </span>
+            </a>
+          ))}
+        </nav>
+      </section>
     </main>
   );
 }
