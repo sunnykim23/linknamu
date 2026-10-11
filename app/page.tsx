@@ -1,8 +1,4 @@
-const links = [
-  { label: 'GitHub', href: 'https://github.com/sunnykim23', emoji: '🐙' },
-  { label: 'Instagram', href: 'https://www.instagram.com/deir.finity/', emoji: '📱' },
-  { label: 'Email', href: 'mailto:boyrukim@gmail.com', emoji: '📮' },
-];
+import { ProfileLinks } from '@/src/components/profile-links';
 
 export default function HomePage() {
   return (
@@ -33,22 +29,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <nav aria-label="프로필 링크" className="mt-9 space-y-3.5 sm:mt-10 sm:space-y-4">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex min-h-[68px] items-center justify-center rounded-[20px] border border-white/75 bg-white/55 px-5 py-4 text-center shadow-[0_8px_24px_rgba(120,82,59,0.12)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/75 hover:shadow-[0_12px_28px_rgba(120,82,59,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8e8dc]"
-            >
-              <span className="text-base font-semibold tracking-[-0.02em] text-stone-800 sm:text-[17px]">
-                <span className="mr-2.5" aria-hidden="true">{link.emoji}</span>
-                {link.label}
-              </span>
-            </a>
-          ))}
-        </nav>
+        <ProfileLinks />
       </section>
     </main>
   );
