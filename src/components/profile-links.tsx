@@ -93,13 +93,13 @@ export function ProfileLinks() {
             target="_blank"
             rel="noreferrer"
             onClick={() => void recordClick(link.id)}
-            className="group relative flex min-h-[68px] items-center justify-center rounded-[20px] border border-white/75 bg-white/55 px-14 py-4 text-center shadow-[0_8px_24px_rgba(120,82,59,0.12)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/75 hover:shadow-[0_12px_28px_rgba(120,82,59,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8e8dc]"
+            className="group relative flex min-h-[72px] items-center justify-center rounded-[24px] border border-white/85 bg-white/60 px-16 py-4 text-center shadow-[0_10px_28px_rgba(120,82,59,0.14)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/80 hover:shadow-[0_14px_32px_rgba(120,82,59,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8e8dc]"
           >
             <span className="text-base font-semibold tracking-[-0.02em] text-stone-800 sm:text-[17px]">
               <span className="mr-2.5" aria-hidden="true">{link.emoji}</span>
               {link.label}
             </span>
-            <span className="absolute right-4 text-xs font-medium tabular-nums text-stone-500 sm:right-5">
+            <span className="absolute right-5 text-xs font-medium tabular-nums text-stone-500 sm:right-6">
               {counts[link.id].toLocaleString('ko-KR')}회
             </span>
           </a>
